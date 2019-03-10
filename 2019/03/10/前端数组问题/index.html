@@ -7,17 +7,17 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。、、、 * $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; 、、、 ##使用foreach把取得的值插">
+  <meta name="description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。 $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; ##使用foreach把取得的值插入数据库 $sql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2019/03/10/前端数组问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。、、、 * $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; 、、、 ##使用foreach把取得的值插">
+<meta property="og:description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。 $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; ##使用foreach把取得的值插入数据库 $sql">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-10T08:01:38.802Z">
+<meta property="og:updated_time" content="2019-03-10T08:07:04.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。、、、 * $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; 、、、 ##使用foreach把取得的值插">
+<meta name="twitter:description" content="#前端传递数组问题 ##获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。 $a = json_decode($request -&amp;gt; getContent()); $group_name = $a -&amp;gt; group_name; $members = $a -&amp;gt; members; ##使用foreach把取得的值插入数据库 $sql">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -77,15 +77,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#前端传递数组问题</p>
-<p>##获取前端传递的数组<br>可以使用json_decode的getContent方法获得，在从中取得相应的值。<br>、、、<br> *<br> $a = json_decode($request -&gt; getContent());<br> $group_name = $a -&gt; group_name;<br> $members = $a -&gt; members;<br> 、、、</p>
-<p>##使用foreach把取得的值插入数据库<br>、、、<br>*<br>$sql = ‘insert into chat_group (member_id,group_name,member_level, creat_time) VALUES’;<br>       foreach($members as $member) {<br>            $create_time = date(‘Y-m-d H:i:s’,time());<br>            $mem_id = “‘“.$member-&gt;id.”‘“;<br>            $g_name = “‘“.$group_name.”‘“;<br>            $c_time = “‘“.$create_time.”‘“;</p>
-<pre><code>    $sql .= &apos;(&apos; . $mem_id.&apos;,&apos;.$g_name.&apos;,&apos;.$member-&gt;level.&apos;,&apos;.$c_time.&apos;)&apos;.&apos;,&apos;;
-  }
-$sql = rtrim($sql, &apos;,&apos;);
- DB::insert($sql);
-return response()-&gt;json($sql);
-</code></pre><p>*<br>、、、 </p>
+<p>##获取前端传递的数组<br>可以使用json_decode的getContent方法获得，在从中取得相应的值。</p>
+<pre><code>$a = json_decode($request -&gt; getContent());
+$group_name = $a -&gt; group_name;
+$members = $a -&gt; members;
+</code></pre><p>##使用foreach把取得的值插入数据库</p>
+<pre><code>$sql = &apos;insert into chat_group    
+(member_id,group_name,member_level, creat_time) 
+VALUES&apos;;
+  foreach($members as $member) {
+       $create_time = date(&apos;Y-m-d        
+       H:i:s&apos;,time());
+       $mem_id = &quot;&apos;&quot;.$member-&gt;id.&quot;&apos;&quot;;
+       $g_name = &quot;&apos;&quot;.$group_name.&quot;&apos;&quot;;
+       $c_time = &quot;&apos;&quot;.$create_time.&quot;&apos;&quot;;
 
+     $sql .= &apos;(&apos; . $mem_id.&apos;,&apos;.$g_name.&apos;,&apos;. 
+     $member-&gt;level.&apos;,&apos;.$c_time.&apos;)&apos;.&apos;,&apos;;
+   }
+ $sql = rtrim($sql, &apos;,&apos;);
+  DB::insert($sql);
+ return response()-&gt;json($sql);
+</code></pre>
       
     </div>
     <footer class="article-footer">
