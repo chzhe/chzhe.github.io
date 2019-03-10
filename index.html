@@ -75,24 +75,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#前端传递数组问题</p>
-<p>##获取前端传递的数组<br>可以使用json_decode的getContent方法获得，在从中取得相应的值。<br>、、、</p>
-<ul>
-<li>$a = json_decode($request -&gt; getContent());</li>
-<li>$group_name = $a -&gt; group_name;</li>
-<li>$members = $a -&gt; members;<br>、、、<br>##使用foreach把取得的值插入数据库<br>、、、</li>
-<li>$sql = ‘insert into chat_group (member_id,group_name,member_level, creat_time) VALUES’;</li>
-<li><p>foreach($members as $member) {</p>
-<pre><code>$create_time = date(&apos;Y-m-d H:i:s&apos;,time());
-$mem_id = &quot;&apos;&quot;.$member-&gt;id.&quot;&apos;&quot;;
-$g_name = &quot;&apos;&quot;.$group_name.&quot;&apos;&quot;;
-$c_time = &quot;&apos;&quot;.$create_time.&quot;&apos;&quot;;
-</code></pre></li>
-<li><p>$sql .= ‘(‘ . $mem_id.’,’.$g_name.’,’.$member-&gt;level.’,’.$c_time.’)’.’,’;<br>}</p>
-</li>
-<li>$sql = rtrim($sql, ‘,’);</li>
-<li>DB::insert($sql);</li>
-<li>return response()-&gt;json($sql);<br>、、、 </li>
-</ul>
+<p>##获取前端传递的数组<br>可以使用json_decode的getContent方法获得，在从中取得相应的值。<br>、、、<br> *<br> $a = json_decode($request -&gt; getContent());<br> $group_name = $a -&gt; group_name;<br> $members = $a -&gt; members;<br> 、、、</p>
+<p>##使用foreach把取得的值插入数据库<br>、、、<br>*<br>$sql = ‘insert into chat_group (member_id,group_name,member_level, creat_time) VALUES’;<br>       foreach($members as $member) {<br>            $create_time = date(‘Y-m-d H:i:s’,time());<br>            $mem_id = “‘“.$member-&gt;id.”‘“;<br>            $g_name = “‘“.$group_name.”‘“;<br>            $c_time = “‘“.$create_time.”‘“;</p>
+<pre><code>    $sql .= &apos;(&apos; . $mem_id.&apos;,&apos;.$g_name.&apos;,&apos;.$member-&gt;level.&apos;,&apos;.$c_time.&apos;)&apos;.&apos;,&apos;;
+  }
+$sql = rtrim($sql, &apos;,&apos;);
+ DB::insert($sql);
+return response()-&gt;json($sql);
+</code></pre><p>*<br>、、、 </p>
 
       
     </div>
