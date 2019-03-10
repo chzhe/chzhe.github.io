@@ -74,29 +74,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#前端传递数组问题</p>
-<p>##获取前端传递的数组<br>可以使用json_decode的getContent方法获得，在从中取得相应的值。</p>
-<pre><code>$a = json_decode($request -&gt; getContent());
-$group_name = $a -&gt; group_name;
-$members = $a -&gt; members;
-</code></pre><p>##使用foreach把取得的值插入数据库</p>
-<pre><code>$sql = &apos;insert into chat_group    
-(member_id,group_name,member_level, creat_time) 
-VALUES&apos;;
-  foreach($members as $member) {
-       $create_time = date(&apos;Y-m-d        
-       H:i:s&apos;,time());
-       $mem_id = &quot;&apos;&quot;.$member-&gt;id.&quot;&apos;&quot;;
-       $g_name = &quot;&apos;&quot;.$group_name.&quot;&apos;&quot;;
-       $c_time = &quot;&apos;&quot;.$create_time.&quot;&apos;&quot;;
+        <h1 id="前端传递数组问题"><a href="#前端传递数组问题" class="headerlink" title="前端传递数组问题"></a>前端传递数组问题</h1><h2 id="获取前端传递的数组"><a href="#获取前端传递的数组" class="headerlink" title="获取前端传递的数组"></a>获取前端传递的数组</h2><p>可以使用json_decode的getContent方法获得，在从中取得相应的值。</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">$a = json_decode($request -&gt; getContent());</span><br><span class="line">$group_name = $a -&gt; group_name;</span><br><span class="line">$members = $a -&gt; members;</span><br></pre></td></tr></table></figure>
+<h2 id="使用foreach把取得的值插入数据库"><a href="#使用foreach把取得的值插入数据库" class="headerlink" title="使用foreach把取得的值插入数据库"></a>使用foreach把取得的值插入数据库</h2> <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$sql = <span class="string">'insert into chat_group    </span></span><br><span class="line"><span class="string">(member_id,group_name,member_level, creat_time) </span></span><br><span class="line"><span class="string">VALUES'</span>;</span><br><span class="line">  <span class="keyword">foreach</span>($members <span class="keyword">as</span> $member) &#123;</span><br><span class="line">       $create_time = date(<span class="string">'Y-m-d        </span></span><br><span class="line"><span class="string">       H:i:s'</span>,time());</span><br><span class="line">       $mem_id = <span class="string">"'"</span>.$member-&gt;id.<span class="string">"'"</span>;</span><br><span class="line">       $g_name = <span class="string">"'"</span>.$group_name.<span class="string">"'"</span>;</span><br><span class="line">       $c_time = <span class="string">"'"</span>.$create_time.<span class="string">"'"</span>;</span><br><span class="line"></span><br><span class="line">     $sql .= <span class="string">'('</span> . $mem_id.<span class="string">','</span>.$g_name.<span class="string">','</span>. </span><br><span class="line">     $member-&gt;level.<span class="string">','</span>.$c_time.<span class="string">')'</span>.<span class="string">','</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> $sql = rtrim($sql, <span class="string">','</span>);</span><br><span class="line">  DB::insert($sql);</span><br><span class="line"> <span class="keyword">return</span> response()-&gt;json($sql);</span><br></pre></td></tr></table></figure>
 
-     $sql .= &apos;(&apos; . $mem_id.&apos;,&apos;.$g_name.&apos;,&apos;. 
-     $member-&gt;level.&apos;,&apos;.$c_time.&apos;)&apos;.&apos;,&apos;;
-   }
- $sql = rtrim($sql, &apos;,&apos;);
-  DB::insert($sql);
- return response()-&gt;json($sql);
-</code></pre>
       
     </div>
     <footer class="article-footer">
