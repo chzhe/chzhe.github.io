@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。  123$a = json_decode($request -&amp;gt; getContent());$group_name = $a -&amp;gt; group_name;$members = $a -&amp;gt; members; 使用foreach把取得的值插入数据库 1234567891011121">
+<meta name="description" content="此项目是把github上的一个项目拷贝过来再加工。1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。2.把项目文件夹里的文件都删除掉。3.在命令行项目文件夹里克隆git上的项目。 git clone XXXXXXXX travel ,要在后面加上travel，这样就会成为名称为travel的一级目录。3.拷贝 .env.example文件为.env文件 cp .env.exampl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端传递数组问题">
-<meta property="og:url" content="http://yoursite.com/2019/03/10/前端数组问题/index.html">
+<meta property="og:title" content="宝塔后台搭建">
+<meta property="og:url" content="http://yoursite.com/2019/11/07/宝塔后台搭建/index.html">
 <meta property="og:site_name" content="chz&#39;s blog">
-<meta property="og:description" content="获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。  123$a = json_decode($request -&amp;gt; getContent());$group_name = $a -&amp;gt; group_name;$members = $a -&amp;gt; members; 使用foreach把取得的值插入数据库 1234567891011121">
+<meta property="og:description" content="此项目是把github上的一个项目拷贝过来再加工。1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。2.把项目文件夹里的文件都删除掉。3.在命令行项目文件夹里克隆git上的项目。 git clone XXXXXXXX travel ,要在后面加上travel，这样就会成为名称为travel的一级目录。3.拷贝 .env.example文件为.env文件 cp .env.exampl">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-10T08:22:13.650Z">
+<meta property="og:updated_time" content="2019-11-07T10:48:56.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端传递数组问题">
-<meta name="twitter:description" content="获取前端传递的数组可以使用json_decode的getContent方法获得，在从中取得相应的值。  123$a = json_decode($request -&amp;gt; getContent());$group_name = $a -&amp;gt; group_name;$members = $a -&amp;gt; members; 使用foreach把取得的值插入数据库 1234567891011121">
+<meta name="twitter:title" content="宝塔后台搭建">
+<meta name="twitter:description" content="此项目是把github上的一个项目拷贝过来再加工。1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。2.把项目文件夹里的文件都删除掉。3.在命令行项目文件夹里克隆git上的项目。 git clone XXXXXXXX travel ,要在后面加上travel，这样就会成为名称为travel的一级目录。3.拷贝 .env.example文件为.env文件 cp .env.exampl">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/10/前端数组问题/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/07/宝塔后台搭建/">
 
 
 
 
 
-  <title>前端传递数组问题 | chz's blog</title>
+  <title>宝塔后台搭建 | chz's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/前端数组问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/宝塔后台搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chz">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前端传递数组问题</h1>
+          <h1 class="post-title" itemprop="name headline">宝塔后台搭建</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-10T16:21:18+08:00">
-                2019-03-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T18:20:40+08:00">
+                2019-11-07
               </time>
             
 
@@ -299,10 +299,7 @@
       
 
       
-        <h2 id="获取前端传递的数组"><a href="#获取前端传递的数组" class="headerlink" title="获取前端传递的数组"></a>获取前端传递的数组</h2><p>可以使用json_decode的getContent方法获得，在从中取得相应的值。</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$a = json_decode($request -&gt; getContent());</span><br><span class="line">$group_name = $a -&gt; group_name;</span><br><span class="line">$members = $a -&gt; members;</span><br></pre></td></tr></table></figure>
-<h2 id="使用foreach把取得的值插入数据库"><a href="#使用foreach把取得的值插入数据库" class="headerlink" title="使用foreach把取得的值插入数据库"></a>使用foreach把取得的值插入数据库</h2> <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$sql = <span class="string">'insert into chat_group    </span></span><br><span class="line"><span class="string">(member_id,group_name,member_level, creat_time) </span></span><br><span class="line"><span class="string">VALUES'</span>;</span><br><span class="line">  <span class="keyword">foreach</span>($members <span class="keyword">as</span> $member) &#123;</span><br><span class="line">       $create_time = date(<span class="string">'Y-m-d        </span></span><br><span class="line"><span class="string">       H:i:s'</span>,time());</span><br><span class="line">       $mem_id = <span class="string">"'"</span>.$member-&gt;id.<span class="string">"'"</span>;</span><br><span class="line">       $g_name = <span class="string">"'"</span>.$group_name.<span class="string">"'"</span>;</span><br><span class="line">       $c_time = <span class="string">"'"</span>.$create_time.<span class="string">"'"</span>;</span><br><span class="line"></span><br><span class="line">     $sql .= <span class="string">'('</span> . $mem_id.<span class="string">','</span>.$g_name.<span class="string">','</span>. </span><br><span class="line">     $member-&gt;level.<span class="string">','</span>.$c_time.<span class="string">')'</span>.<span class="string">','</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> $sql = rtrim($sql, <span class="string">','</span>);</span><br><span class="line">  DB::insert($sql);</span><br><span class="line"> <span class="keyword">return</span> response()-&gt;json($sql);</span><br></pre></td></tr></table></figure>
-
+        <h2 id="此项目是把github上的一个项目拷贝过来再加工。"><a href="#此项目是把github上的一个项目拷贝过来再加工。" class="headerlink" title="此项目是把github上的一个项目拷贝过来再加工。"></a>此项目是把github上的一个项目拷贝过来再加工。</h2><h3 id="1-在宝塔页面新建一个网站，项目地址设为了travel，填好域名。"><a href="#1-在宝塔页面新建一个网站，项目地址设为了travel，填好域名。" class="headerlink" title="1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。"></a>1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。</h3><h3 id="2-把项目文件夹里的文件都删除掉。"><a href="#2-把项目文件夹里的文件都删除掉。" class="headerlink" title="2.把项目文件夹里的文件都删除掉。"></a>2.把项目文件夹里的文件都删除掉。</h3><h3 id="3-在命令行项目文件夹里克隆git上的项目。-git-clone-XXXXXXXX-travel-要在后面加上travel，这样就会成为名称为travel的一级目录。"><a href="#3-在命令行项目文件夹里克隆git上的项目。-git-clone-XXXXXXXX-travel-要在后面加上travel，这样就会成为名称为travel的一级目录。" class="headerlink" title="3.在命令行项目文件夹里克隆git上的项目。 git clone XXXXXXXX travel ,要在后面加上travel，这样就会成为名称为travel的一级目录。"></a>3.在命令行项目文件夹里克隆git上的项目。 <code>git clone XXXXXXXX travel</code> ,要在后面加上travel，这样就会成为名称为travel的一级目录。</h3><h3 id="3-拷贝-env-example文件为-env文件-cp-env-example-env-然后修改-env里的配置。"><a href="#3-拷贝-env-example文件为-env文件-cp-env-example-env-然后修改-env里的配置。" class="headerlink" title="3.拷贝 .env.example文件为.env文件 cp .env.example .env,然后修改.env里的配置。"></a>3.拷贝 .env.example文件为.env文件 <code>cp .env.example .env</code>,然后修改.env里的配置。</h3><h3 id="4-在网站目录文件里修改bootstrap和storage文件夹的权限为777"><a href="#4-在网站目录文件里修改bootstrap和storage文件夹的权限为777" class="headerlink" title="4.在网站目录文件里修改bootstrap和storage文件夹的权限为777."></a>4.在网站目录文件里修改bootstrap和storage文件夹的权限为777.</h3><h3 id="5-网站设置二级目录和伪静态。"><a href="#5-网站设置二级目录和伪静态。" class="headerlink" title="5.网站设置二级目录和伪静态。"></a>5.网站设置二级目录和伪静态。</h3><h3 id="6-还有别忘了在项目目录里安装composer。"><a href="#6-还有别忘了在项目目录里安装composer。" class="headerlink" title="6.还有别忘了在项目目录里安装composer。"></a>6.还有别忘了在项目目录里安装composer。</h3><h3 id="7-配置数据库和-env里数据库信息。"><a href="#7-配置数据库和-env里数据库信息。" class="headerlink" title="7.配置数据库和.env里数据库信息。"></a>7.配置数据库和.env里数据库信息。</h3><h2 id="基本方法就是这样，如果有其他问题再后续总结。"><a href="#基本方法就是这样，如果有其他问题再后续总结。" class="headerlink" title="基本方法就是这样，如果有其他问题再后续总结。"></a>基本方法就是这样，如果有其他问题再后续总结。</h2>
       
     </div>
     
@@ -326,8 +323,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/10/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/01/前后端登录注册/" rel="next" title="前后端登录注册">
+                <i class="fa fa-chevron-left"></i> 前后端登录注册
               </a>
             
           </div>
@@ -335,10 +332,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/19/layui中ajax的使用/" rel="prev" title="layui中ajax的使用">
-                layui中ajax的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,7 +454,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取前端传递的数组"><span class="nav-number">1.</span> <span class="nav-text">获取前端传递的数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用foreach把取得的值插入数据库"><span class="nav-number">2.</span> <span class="nav-text">使用foreach把取得的值插入数据库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#此项目是把github上的一个项目拷贝过来再加工。"><span class="nav-number">1.</span> <span class="nav-text">此项目是把github上的一个项目拷贝过来再加工。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在宝塔页面新建一个网站，项目地址设为了travel，填好域名。"><span class="nav-number">1.1.</span> <span class="nav-text">1.在宝塔页面新建一个网站，项目地址设为了travel，填好域名。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-把项目文件夹里的文件都删除掉。"><span class="nav-number">1.2.</span> <span class="nav-text">2.把项目文件夹里的文件都删除掉。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在命令行项目文件夹里克隆git上的项目。-git-clone-XXXXXXXX-travel-要在后面加上travel，这样就会成为名称为travel的一级目录。"><span class="nav-number">1.3.</span> <span class="nav-text">3.在命令行项目文件夹里克隆git上的项目。 git clone XXXXXXXX travel ,要在后面加上travel，这样就会成为名称为travel的一级目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-拷贝-env-example文件为-env文件-cp-env-example-env-然后修改-env里的配置。"><span class="nav-number">1.4.</span> <span class="nav-text">3.拷贝 .env.example文件为.env文件 cp .env.example .env,然后修改.env里的配置。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-在网站目录文件里修改bootstrap和storage文件夹的权限为777"><span class="nav-number">1.5.</span> <span class="nav-text">4.在网站目录文件里修改bootstrap和storage文件夹的权限为777.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-网站设置二级目录和伪静态。"><span class="nav-number">1.6.</span> <span class="nav-text">5.网站设置二级目录和伪静态。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-还有别忘了在项目目录里安装composer。"><span class="nav-number">1.7.</span> <span class="nav-text">6.还有别忘了在项目目录里安装composer。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-配置数据库和-env里数据库信息。"><span class="nav-number">1.8.</span> <span class="nav-text">7.配置数据库和.env里数据库信息。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本方法就是这样，如果有其他问题再后续总结。"><span class="nav-number">2.</span> <span class="nav-text">基本方法就是这样，如果有其他问题再后续总结。</span></a></li></ol></div>
             
 
           </div>
