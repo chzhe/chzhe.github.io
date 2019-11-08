@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9879c8;
+  background: #c8aa81;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2596,6 +2596,20 @@ embed {
   display: block;
   margin: 0px auto 25px auto;
 }
+body {
+  background: url("https://unsplash.com/photos/0SqUthjger8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+.header-inner {
+  opacity: 0.8;
+}
 .custom-logo .site-meta-headline {
   text-align: center;
 }
@@ -2659,4 +2673,32 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background: url("https://unsplash.com/photos/0SqUthjger8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+.header-inner {
+  opacity: 0.8;
+}
+body {
+  background: url("https://unsplash.com/photos/0SqUthjger8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+.header-inner {
+  opacity: 0.8;
 }
