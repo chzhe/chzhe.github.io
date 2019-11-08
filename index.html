@@ -302,7 +302,14 @@
           
           接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：
 把项目目录里的.git文件删除  
- -rf .git ```12345   * 建立一个新的git仓库         ```git init           git add .           g
+ 1rm -rf .git
+
+
+
+建立一个新的git仓库 
+123git init   git add .   git commit -m&apos;xxx&apos;
+
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
