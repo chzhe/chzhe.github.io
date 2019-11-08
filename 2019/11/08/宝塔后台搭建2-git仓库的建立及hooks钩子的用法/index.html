@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除 -rf .git```1* 建立一个新的git仓库``` git init  add .```1* ``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：init --bare XXX.git`">
+<meta name="description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除    -rf .git```12* 建立一个新的git仓库        ``` git init add .```1``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：   init --b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
 <meta property="og:url" content="http://yoursite.com/2019/11/08/宝塔后台搭建2-git仓库的建立及hooks钩子的用法/index.html">
 <meta property="og:site_name" content="chz&#39;s blog">
-<meta property="og:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除 -rf .git```1* 建立一个新的git仓库``` git init  add .```1* ``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：init --bare XXX.git`">
+<meta property="og:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除    -rf .git```12* 建立一个新的git仓库        ``` git init add .```1``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：   init --b">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-08T08:56:42.451Z">
+<meta property="og:updated_time" content="2019-11-08T09:02:04.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
-<meta name="twitter:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除 -rf .git```1* 建立一个新的git仓库``` git init  add .```1* ``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：init --bare XXX.git`">
+<meta name="twitter:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除    -rf .git```12* 建立一个新的git仓库        ``` git init add .```1``` git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事：  回到根目录下建立仓库：   init --b">
 
 
 
@@ -300,20 +300,27 @@
 
       
         <h2 id="接上篇继续。"><a href="#接上篇继续。" class="headerlink" title="接上篇继续。"></a>接上篇继续。</h2><h3 id="后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要："><a href="#后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要：" class="headerlink" title="后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要："></a>后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：</h3><ul>
-<li><p>把项目目录里的.git文件删除 <figure class="highlight plain"><figcaption><span>-rf .git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 建立一个新的git仓库``` git init</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><figure class="highlight plain"><figcaption><span>add .```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* ``` git commit -m&apos;xxx&apos;</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>把项目目录里的.git文件删除  </p>
+ <figure class="highlight plain"><figcaption><span>-rf .git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 建立一个新的git仓库 </span><br><span class="line">       ``` git init</span><br></pre></td></tr></table></figure>
+<pre><code><figure class="highlight plain"><figcaption><span>add .```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``` git commit -m&apos;xxx&apos;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
 <li><p>此时项目仓库已经建立好，但还要做下面的事：</p>
 </li>
-<li>回到根目录下建立仓库：<figure class="highlight plain"><figcaption><span>init --bare XXX.git```,XXX是项目的名字，这里我设的是'travel'</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 设置分支``` git remote add origin /root/travel.git``` /root是我此时的根目录,可以使用```git remote -v```查看分支是否设置好</span><br><span class="line">* 做第一次push ``` git push - u origin master</span><br></pre></td></tr></table></figure></li>
+<li><p>回到根目录下建立仓库： </p>
+ <figure class="highlight plain"><figcaption><span>init --bare XXX.git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* XXX是项目的名字，这里我设的是&apos;travel&apos;</span><br><span class="line">* 设置分支</span><br><span class="line">  ``` git remote add origin /root/travel.git``` </span><br><span class="line">* /root是我此时的根目录,可以使用</span><br><span class="line">   ```git remote -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看分支是否设置好</p>
+</li>
+<li><p>做第一次push </p>
+ <figure class="highlight plain"><figcaption><span>push - u origin master```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 现在要做的是为了提交不用一直pull push而设置的自动部署&apos;hooks&apos;</span><br><span class="line">* 回到项目目录/www/wwwroot/travel里，查看文件目录，里面有个 &apos;hooks&apos;文件夹，进入hooks文件夹里</span><br><span class="line">* 查看新建一个&apos;post-receive&apos;文件: </span><br><span class="line">  ```touch post-receive</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑此文件:</p>
+<figure class="highlight vim"><figcaption><span>post-receive```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在里面加入</span><br><span class="line">```GIT_WORK_TREE=yourProjectDirectory   git checkout -<span class="keyword">f</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’"><a href="#现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’" class="headerlink" title="现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’"></a>现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’</h3><ul>
-<li>回到项目目录/www/wwwroot/travel里，查看文件目录，里面有个 ‘hooks’文件夹，进入hooks文件夹里</li>
-<li><p>查看新建一个’post-receive’文件: <figure class="highlight plain"><figcaption><span>post-receive```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 编辑此文件:```vim post-receive```，在里面加入```GIT_WORK_TREE=yourProjectDirectory   git checkout -f</span><br><span class="line">```代码，把工作树地址改为自己的项目地址:```GIT_WORK_TREE=/www/wwwroot/travel   git checkout -f ``` </span><br><span class="line"></span><br><span class="line">* 赋予&apos;post-receive&apos;可执行权限：```chmod 755 post-receive</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>目前为止，后台项目基本搭建起来，现在可以把项目克隆到本地以便开发：<code>git clone root@XXXXXXX.com:/root/travel.git</code></p>
-</li>
+<p>代码，把工作树地址改为自己的项目地址:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*  赋予&apos;post-receive&apos;可执行权限：</span><br><span class="line">  ```chmod 755 post-receive</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>目前为止，后台项目基本搭建起来，现在可以把项目克隆到本地以便开发：<br><code>git clone root@XXXXXXX.com:/root/travel.git</code></li>
 </ul>
 
       
@@ -470,7 +477,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接上篇继续。"><span class="nav-number">1.</span> <span class="nav-text">接上篇继续。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要："><span class="nav-number">1.1.</span> <span class="nav-text">后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’"><span class="nav-number">1.2.</span> <span class="nav-text">现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接上篇继续。"><span class="nav-number">1.</span> <span class="nav-text">接上篇继续。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要："><span class="nav-number">1.1.</span> <span class="nav-text">后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：</span></a></li></ol></li></ol></div>
             
 
           </div>
