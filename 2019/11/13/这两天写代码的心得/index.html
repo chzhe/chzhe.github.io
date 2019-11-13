@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除rm -rf .git  建立一个新的git仓库     123git initgit add .git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事： 回到根目录下建立仓库：git init --bare XXX.git   X">
+<meta name="description" content="这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。认真，仔细，这是最应该做到的。 在写代码过程中，发现最多的问题是不仔细，很多打错的情况。还有一些是复制粘贴过来代码后进行修改，在修改过程中，会漏改很多。这些问题，如果在写的过程中花一分钟的时间来边写边检查，会省下很多很多后期找问题的时间。  对数据结构应该去多了解。 感觉自己对数据结构了解的很不充分，这样在写一些数据的时候，经常会把结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
-<meta property="og:url" content="http://yoursite.com/2019/11/08/宝塔后台搭建2-git仓库的建立及hooks钩子的用法/index.html">
+<meta property="og:title" content="这两天写代码的心得">
+<meta property="og:url" content="http://yoursite.com/2019/11/13/这两天写代码的心得/index.html">
 <meta property="og:site_name" content="chz&#39;s blog">
-<meta property="og:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除rm -rf .git  建立一个新的git仓库     123git initgit add .git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事： 回到根目录下建立仓库：git init --bare XXX.git   X">
+<meta property="og:description" content="这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。认真，仔细，这是最应该做到的。 在写代码过程中，发现最多的问题是不仔细，很多打错的情况。还有一些是复制粘贴过来代码后进行修改，在修改过程中，会漏改很多。这些问题，如果在写的过程中花一分钟的时间来边写边检查，会省下很多很多后期找问题的时间。  对数据结构应该去多了解。 感觉自己对数据结构了解的很不充分，这样在写一些数据的时候，经常会把结构">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-08T09:21:30.445Z">
+<meta property="og:updated_time" content="2019-11-13T15:42:08.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
-<meta name="twitter:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除rm -rf .git  建立一个新的git仓库     123git initgit add .git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事： 回到根目录下建立仓库：git init --bare XXX.git   X">
+<meta name="twitter:title" content="这两天写代码的心得">
+<meta name="twitter:description" content="这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。认真，仔细，这是最应该做到的。 在写代码过程中，发现最多的问题是不仔细，很多打错的情况。还有一些是复制粘贴过来代码后进行修改，在修改过程中，会漏改很多。这些问题，如果在写的过程中花一分钟的时间来边写边检查，会省下很多很多后期找问题的时间。  对数据结构应该去多了解。 感觉自己对数据结构了解的很不充分，这样在写一些数据的时候，经常会把结构">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/08/宝塔后台搭建2-git仓库的建立及hooks钩子的用法/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/13/这两天写代码的心得/">
 
 
 
 
 
-  <title>宝塔后台搭建2--git仓库的建立及hooks钩子的用法 | chz's blog</title>
+  <title>这两天写代码的心得 | chz's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/08/宝塔后台搭建2-git仓库的建立及hooks钩子的用法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/13/这两天写代码的心得/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chz">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">宝塔后台搭建2--git仓库的建立及hooks钩子的用法</h1>
+          <h1 class="post-title" itemprop="name headline">这两天写代码的心得</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-08T16:32:50+08:00">
-                2019-11-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-13T23:17:42+08:00">
+                2019-11-13
               </time>
             
 
@@ -299,45 +299,22 @@
       
 
       
-        <h2 id="接上篇继续。"><a href="#接上篇继续。" class="headerlink" title="接上篇继续。"></a>接上篇继续。</h2><h3 id="后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要："><a href="#后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要：" class="headerlink" title="后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要："></a>后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：</h3><ul>
-<li><p>把项目目录里的.git文件删除<br><code>rm -rf .git</code></p>
-</li>
-<li><p>建立一个新的git仓库  </p>
-</li>
+        <h4 id="这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。"><a href="#这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。" class="headerlink" title="这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。"></a>这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。</h4><h2 id="认真，仔细，这是最应该做到的。"><a href="#认真，仔细，这是最应该做到的。" class="headerlink" title="认真，仔细，这是最应该做到的。"></a>认真，仔细，这是最应该做到的。</h2><ul>
+<li>在写代码过程中，发现最多的问题是不仔细，很多打错的情况。还有一些是复制粘贴过来代码后进行修改，在修改过程中，会漏改很多。这些问题，如果在写的过程中花一分钟的时间来边写边检查，会省下很多很多后期找问题的时间。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m&apos;xxx&apos;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>此时项目仓库已经建立好，但还要做下面的事：</li>
-<li><p>回到根目录下建立仓库：<br><code>git init --bare XXX.git</code> </p>
-</li>
-<li><p>XXX是项目的名字，这里我设的是 ’travel‘</p>
-</li>
-<li><p>设置分支</p>
-<p><code>git remote add origin /root/travel.git</code></p>
-</li>
-<li><p>‘/root’是我此时的根目录,可以使用</p>
-<p><code>git remote -v</code></p>
-</li>
-<li><p>查看分支是否设置好</p>
-</li>
-<li><p>做第一次push </p>
-<p> <code>git push - u origin master</code></p>
-</li>
+<h2 id="对数据结构应该去多了解。"><a href="#对数据结构应该去多了解。" class="headerlink" title="对数据结构应该去多了解。"></a>对数据结构应该去多了解。</h2><ul>
+<li>感觉自己对数据结构了解的很不充分，这样在写一些数据的时候，经常会把结构写错，而且写错了也不知道才是最可怕的，因为去查找错误的时候，自己也不会认为写的是错的。要花时间把数据结构弄清晰，<strong>ajax</strong>，<strong>json</strong>，<strong>数组</strong>等等。</li>
 </ul>
-<h3 id="现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’"><a href="#现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’" class="headerlink" title="现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’"></a>现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’</h3><ul>
-<li>回到项目目录/www/wwwroot/travel里，查看文件目录，里面有个 ‘hooks’文件夹，进入hooks文件夹里</li>
-<li><p>查看新建一个’post-receive’文件: </p>
-<p><code>touch post-receive</code></p>
-</li>
-<li><p>编辑此文件:</p>
-<p><code>vim post-receive</code><br>在里面加入<br><code>GIT_WORK_TREE=yourProjectDirectory   git checkout -f</code><br>代码，把工作树地址改为自己的项目地址:<br><code>GIT_WORK_TREE=/www/wwwroot/travel   git checkout -f</code></p>
-</li>
-<li><p>赋予’post-receive’可执行权限：<br><code>chmod 755 post-receive</code></p>
-</li>
-<li><p>目前为止，后台项目基本搭建起来，现在可以把项目克隆到本地以便开发：<br><code>git clone root@XXXXXXX.com:/root/travel.git</code></p>
-</li>
+<h2 id="laravel框架要把文档研究下。PHP也要继续学习。"><a href="#laravel框架要把文档研究下。PHP也要继续学习。" class="headerlink" title="laravel框架要把文档研究下。PHP也要继续学习。"></a>laravel框架要把文档研究下。PHP也要继续学习。</h2><ul>
+<li>到现在为止，框架的了解还不深入，框架里的很多用法了解不多，PHP里很多方法也不清楚，这也是限制写代码速度的很大原因。</li>
 </ul>
-
+<h2 id="前端知识要进行熟悉。"><a href="#前端知识要进行熟悉。" class="headerlink" title="前端知识要进行熟悉。"></a>前端知识要进行熟悉。</h2><ul>
+<li>前端的基本知识，尤其是现在用的 <strong>layui</strong>  应该多去了解，在这两天写代码的过程中，页面方面的问题是花费时间最长的。</li>
+</ul>
+<h2 id="遇到问题，要学会查找分析。"><a href="#遇到问题，要学会查找分析。" class="headerlink" title="遇到问题，要学会查找分析。"></a>遇到问题，要学会查找分析。</h2><ul>
+<li>遇到各种报错问题，要学会从页面检查等方面去分析，分析其中的元素，要学会通过打印等手段进一步去剖析问题，培养独自解决问题的能力。</li>
+</ul>
+<h2 id="遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要多写，多读，多看，多问，努力提升！"><a href="#遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要多写，多读，多看，多问，努力提升！" class="headerlink" title="遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要多写，多读，多看，多问，努力提升！"></a>遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要<strong>多写</strong>，<strong>多读</strong>，<strong>多看</strong>，<strong>多问</strong>，努力提升！</h2>
       
     </div>
     
@@ -361,8 +338,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/07/宝塔后台搭建/" rel="next" title="宝塔后台搭建">
-                <i class="fa fa-chevron-left"></i> 宝塔后台搭建
+              <a href="/2019/11/08/宝塔后台搭建2-git仓库的建立及hooks钩子的用法/" rel="next" title="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
+                <i class="fa fa-chevron-left"></i> 宝塔后台搭建2--git仓库的建立及hooks钩子的用法
               </a>
             
           </div>
@@ -370,10 +347,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/13/这两天写代码的心得/" rel="prev" title="这两天写代码的心得">
-                这两天写代码的心得 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -496,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接上篇继续。"><span class="nav-number">1.</span> <span class="nav-text">接上篇继续。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后台搭好后还不能用git，因为此时项目里的-git文件是克隆过来的，因此需要："><span class="nav-number">1.1.</span> <span class="nav-text">后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’"><span class="nav-number">1.2.</span> <span class="nav-text">现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。"><span class="nav-number">1.</span> <span class="nav-text">这两天写了一点代码，发现很多问题，现在就这些问题进行一些总结。</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#认真，仔细，这是最应该做到的。"><span class="nav-number"></span> <span class="nav-text">认真，仔细，这是最应该做到的。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数据结构应该去多了解。"><span class="nav-number"></span> <span class="nav-text">对数据结构应该去多了解。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#laravel框架要把文档研究下。PHP也要继续学习。"><span class="nav-number"></span> <span class="nav-text">laravel框架要把文档研究下。PHP也要继续学习。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端知识要进行熟悉。"><span class="nav-number"></span> <span class="nav-text">前端知识要进行熟悉。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到问题，要学会查找分析。"><span class="nav-number"></span> <span class="nav-text">遇到问题，要学会查找分析。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要多写，多读，多看，多问，努力提升！"><span class="nav-number"></span> <span class="nav-text">遇到的具体问题没写出来，因为我觉得目前遇到的都是很简单的问题，只是自己搞不懂。其实，感觉最主要的问题是看的少，写得少，以后要多写，多读，多看，多问，努力提升！</span></a></li></div>
             
 
           </div>
