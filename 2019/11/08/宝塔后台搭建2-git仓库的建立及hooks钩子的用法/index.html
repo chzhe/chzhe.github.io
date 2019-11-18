@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="chz&#39;s blog">
 <meta property="og:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除rm -rf .git  建立一个新的git仓库     123git initgit add .git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事： 回到根目录下建立仓库：git init --bare XXX.git   X">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-08T09:21:30.445Z">
+<meta property="og:updated_time" content="2019-11-18T08:52:44.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宝塔后台搭建2--git仓库的建立及hooks钩子的用法">
 <meta name="twitter:description" content="接上篇继续。后台搭好后还不能用git，因为此时项目里的.git文件是克隆过来的，因此需要： 把项目目录里的.git文件删除rm -rf .git  建立一个新的git仓库     123git initgit add .git commit -m&amp;apos;xxx&amp;apos;  此时项目仓库已经建立好，但还要做下面的事： 回到根目录下建立仓库：git init --bare XXX.git   X">
@@ -312,8 +312,7 @@
 </li>
 <li><p>XXX是项目的名字，这里我设的是 ’travel‘</p>
 </li>
-<li><p>设置分支</p>
-<p><code>git remote add origin /root/travel.git</code></p>
+<li><p>在项目git里（<code>/www/wwwroot/travel</code>里）设置分支<br> (原来记得是在根目录里，根目录应该是记错了)<br><code>git remote add origin /root/travel.git</code></p>
 </li>
 <li><p>‘/root’是我此时的根目录,可以使用</p>
 <p><code>git remote -v</code></p>
@@ -325,7 +324,7 @@
 </li>
 </ul>
 <h3 id="现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’"><a href="#现在要做的是为了提交不用一直pull-push而设置的自动部署’hooks’" class="headerlink" title="现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’"></a>现在要做的是为了提交不用一直pull push而设置的自动部署’hooks’</h3><ul>
-<li>回到项目目录/www/wwwroot/travel里，查看文件目录，里面有个 ‘hooks’文件夹，进入hooks文件夹里</li>
+<li>（回到项目目录/www/wwwroot/travel里，（这里应该是记错了，不是这个目录））在根目录<code>/root/ai.git</code>里，查看文件目录，里面有个 ‘hooks’文件夹，进入hooks文件夹里</li>
 <li><p>查看新建一个’post-receive’文件: </p>
 <p><code>touch post-receive</code></p>
 </li>
